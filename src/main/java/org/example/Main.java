@@ -25,7 +25,7 @@ public class Main {
         // InfluxDBClient client = InfluxDBClientFactory.create("http://localhost:8086", token.toCharArray());
         InfluxDBClient client = InfluxDBClientFactory.create("http://localhost:8086", "ace2267","Dlwlsgh007!".toCharArray());
 
-        String data = "mem,host=host2 used_percent=23.43234543";
+        String data = "mem,host=host1 used_percent=23.43234543";
 
         WriteApiBlocking writeApi = client.getWriteApiBlocking();
         writeApi.writeRecord(bucket, org, WritePrecision.NS, data);
